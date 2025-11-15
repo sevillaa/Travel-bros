@@ -4,7 +4,7 @@ const path = require("path");
 const multer = require("multer");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Ruta al fichero JSON donde guardaremos los viajes
 const DATA_FILE = path.join(__dirname, "trips.json");
