@@ -1,0 +1,11 @@
+# Dependencias
+node_modules/
+
+# Archivos de subida
+uploads/
+
+# Ficheros de sistema de macOS
+.DS_Store
+
+# Variables de entorno (cuando las uses)
+.env
