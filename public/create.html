@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear viaje - Travel Bros</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="simple-header">
+        <div class="container">
+            <a href="index.html" class="logo-small">TRAVEL BROS</a>
+        </div>
+    </header>
+
+    <main class="create-page">
+        <div class="container create-layout">
+            <section class="create-card">
+                <h1>Crear viaje</h1>
+
+                <form id="create-trip-form">
+                    <!-- Fecha de votación -->
+                    <div class="field-group">
+                        <label for="votingDate">Fecha de votación</label>
+                        <input type="date" id="votingDate" name="votingDate" required />
+                    </div>
+
+                    <!-- Participantes -->
+                    <div class="field-group">
+                        <div class="participants-header">
+                            <label>Participantes</label>
+                            <button type="button" id="add-participant" class="icon-btn" aria-label="Añadir participante">
+                                +
+                            </button>
+                        </div>
+
+                        <div id="participants-list">
+                            <input
+                                type="text"
+                                name="participants[]"
+                                placeholder="Nombre del participante"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Configuración de destinos (solo límites) -->
+                    <div class="field-group">
+                        <label for="maxYesPerUser">
+                            Nº destinos que cada usuario puede marcar como "quiero ir"
+                        </label>
+                        <input
+                            type="number"
+                            id="maxYesPerUser"
+                            name="maxYesPerUser"
+                            min="0"
+                            placeholder="Ej: 3"
+                        />
+                    </div>
+
+                    <div class="field-group">
+                        <label for="maxNoPerUser">
+                            Nº destinos que cada usuario puede marcar como "no quiero ir"
+                        </label>
+                        <input
+                            type="number"
+                            id="maxNoPerUser"
+                            name="maxNoPerUser"
+                            min="0"
+                            placeholder="Ej: 2"
+                        />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">
+                        Crear viaje
+                    </button>
+
+                    <!-- Banner con código y botón copiar -->
+                    <div id="create-result" class="result-message create-banner" hidden>
+                        <p>🎉 Viaje creado. Comparte este código con tus amigos:</p>
+                        <div class="code-row">
+                            <span id="trip-code"></span>
+                            <button type="button" id="copy-code-btn" class="btn btn-outline small-btn">
+                                Copiar
+                            </button>
+                        </div>
+                        <a href="join.html" class="small-link">Ir a la página de unirse</a>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="waves"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-brand">© 2025 Travel Bros</p>
+            <nav class="footer-links">
+                <a href="#">Política de privacidad</a>
+                <a href="#">Aviso legal</a>
+                <a href="#">Cookies</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="create.js"></script>
+</body>
+</html>
+

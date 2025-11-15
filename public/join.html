@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unirse a viaje - Travel Bros</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="simple-header">
+        <div class="container">
+            <a href="index.html" class="logo-small">TRAVEL BROS</a>
+        </div>
+    </header>
+
+    <main class="create-page">
+        <div class="container create-layout">
+            <section class="create-card">
+                <h1>Unirse a un viaje</h1>
+
+                <form id="join-trip-form">
+                    <div class="field-group">
+                        <label for="tripCode">Código del viaje</label>
+                        <input
+                            type="text"
+                            id="tripCode"
+                            name="tripCode"
+                            placeholder="Ej: AB7KQ9"
+                            required
+                        />
+                    </div>
+
+                    <div class="field-group">
+                        <label for="email">Tu email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="tucorreo@example.com"
+                            required
+                        />
+                    </div>
+
+                    <div class="field-group">
+                        <label for="participantName">Tu nombre</label>
+                        <input
+                            type="text"
+                            id="participantName"
+                            name="participantName"
+                            placeholder="Nombre del participante"
+                            required
+                        />
+                    </div>
+
+                    <div class="field-group">
+                        <label for="yesDestinations">Destinos que quieres (usa los nombres definidos por el creador, separados por comas)</label>
+                        <input
+                            type="text"
+                            id="yesDestinations"
+                            name="yesDestinations"
+                            placeholder="Ej: Roma, Londres"
+                        />
+                    </div>
+
+                    <div class="field-group">
+                        <label for="noDestinations">Destinos que no quieres</label>
+                        <input
+                            type="text"
+                            id="noDestinations"
+                            name="noDestinations"
+                            placeholder="Ej: Budapest"
+                        />
+                    </div>
+
+                    <div class="field-group">
+                        <label for="presentationFile">Sube tu presentación (PDF, PPT...)</label>
+                        <input
+                            type="file"
+                            id="presentationFile"
+                            name="presentationFile"
+                            accept=".pdf,.ppt,.pptx,.doc,.docx"
+                        />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">
+                        Unirme
+                    </button>
+
+                    <p id="join-result" class="result-message" hidden></p>
+                    <ul id="passenger-list" class="passenger-list" hidden></ul>
+                </form>
+            </section>
+        </div>
+
+        <div class="waves"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-brand">© 2025 Travel Bros</p>
+            <nav class="footer-links">
+                <a href="#">Política de privacidad</a>
+                <a href="#">Aviso legal</a>
+                <a href="#">Cookies</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="join.js"></script>
+</body>
+</html>
